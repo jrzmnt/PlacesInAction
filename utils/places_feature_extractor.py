@@ -23,15 +23,13 @@ def count_lines(f):
 
 def write_features(feat_file, path, label, feat):
 
-	feat_file.write(path)
-	feat_file.write(' ')
+	feat_file.write(path+' '+label+' ')
 
 	for i in feat:
 		for j in i:
 			feat_file.write('%s' % round(j,3))
 			feat_file.write(' ')
 
-	feat_file.write(label)
 	feat_file.write('\n')
 
 def extractor(path_file):
